@@ -20,7 +20,9 @@ public class Reduce extends Reducer<Text, Text, Text, Text> {
 			sum++;
 
 		}
+		//print out file names
 		context.write(key, new Text(keyword.toString() + "\n"));
+		//print out total occurrence
 		context.write(null, new Text("Total Occurrence of " + key.toString() + ": " + sum + "\n"));
 	}
 }
