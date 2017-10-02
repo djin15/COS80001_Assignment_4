@@ -9,7 +9,6 @@ public class Reduce extends Reducer<Text, Text, Text, Text> {
 	public void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
 		int sum = 0;
 		String fileName = "";
-		String textString = "{";
 		HashMap<String, Integer> keyword = new HashMap<String, Integer>();
 		for (Text val : values) {
 			fileName = val.toString();
